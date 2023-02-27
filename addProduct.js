@@ -59,3 +59,8 @@ fetch(apiUrl, {
     console.error("Error pushing object to API:", error);
   });
 })
+  let Cart = document.getElementById('Cart')
+  Cart.addEventListener('click', ()=>{
+    window.location.href= 'cartedItems.html'
+    
+  })
