@@ -1,0 +1,283 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 0.9rem;
+    font-family :"Amazon Ember"
+Arial
+sans-serif
+}
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+#Electronics{
+    background-image: url('Electronic.jpeg');
+    
+    width: 80%;
+    height: 30vh;
+    background-size: cover;
+}
+#Jewelery{
+    background-image: url('jeweleryjpg.jpg');
+    width: 80%;
+    height: 30vh;
+    background-size: cover;
+}
+#MenWear{
+    background-image: url('menwear.jpg');
+    width: 80%;
+    height: 30vh;
+    background-size: cover;
+}
+#WomenWear{
+    background-image: url('womenwear.jpg');
+    width: 80%;
+    height: 30vh;
+    background-size: cover;
+}
+#categories{
+  display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-around;
+    align-content: center;
+
+}
+#WomenWearDiv{
+   width: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+border-radius: 15px
+}
+#MenWearDiv{
+    width: 250px;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 40vh;
+ border-radius: 15px
+ }
+ #ElectronicsDiv{
+    width: 250px;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 40vh;
+     border-radius: 15px
+ 
+ }
+ #JeweleryDiv{
+    width: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; 
+border-radius: 15px
+ }
+#navBar{
+    display: flex;
+    background-color:#ff8800;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+}
+#part1{
+    display: flex;
+    gap: 20px;
+}
+#part2{
+    display: flex;
+    gap: 20px;
+}
+#part3{
+    display: flex;
+    gap: 20px;
+}
+#iconKenya{
+    display: flex;
+    gap: 10px;
+}
+#businessName{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+#images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+#delete{
+    background-color: white;
+    border: none;
+}
+#itemsInCart{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+button:hover{
+  cursor: pointer;
+}
+button{
+    border: none;
+}
+#addCart{
+    width: 5vh;
+    background-color: white;
+}
+#addItem{
+    width: 5vh;
+    border: none;
+    background-color: #ff8800;
+}
+
+#Cart{
+    background-color: #ff8800;
+    color: white;
+    border: none;
+}
+.slideshow img{
+ width: 40%;
+ height: 40vh;
+}
+.slideshow{
+    display: flex;
+    
+   
+}
+#input{
+    display: flex;
+    justify-content: center;
+    
+}
+#addProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+#navBar{
+    height: 10vh;
+}
+#part2{
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+#navBar2{
+    height: 5vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff8800;
+}
+#Inputs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+input{
+    width: 20vw;
+}
+footer {
+    background-color:#ff8800;
+    padding: 30px 0;
+    margin-top: 50px;
+    color: white;
+  }
+  
+  h4 {
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  li a:hover {
+    color: #000;
+  }
+  
+  hr {
+    border-color: #ddd;
+  }
+  
+  .list-inline li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .pull-right {
+    float: right;
+  }
+  
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  .row {
+    margin: 0 -15px;
+    box-sizing: border-box;
+  }
+  
+  .col-md-4 {
+    width: 33.33333333%;
+    float: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  #theProduct{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  
+  #theProduct:hover{
+    cursor: pointer;
+    border-radius: 10px;
+    border: 0.4px solid #f0f0f0;
+  }
+  
+  .imgProduct{
+    padding-top: 60px;
+    
+  }
