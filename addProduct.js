@@ -33,7 +33,7 @@ addProducts.addEventListener('click', ()=>{
         Category: document.getElementById('category').value,
         price: document.getElementById('productPrice').value,
         image:document.getElementById('productImage').value,
-        ProductQuantity:document.getElementById("quantity").value
+        // ProductQuantity:document.getElementById("quantity").value
       };
       console.log(product);
       localStorage.setItem("product", JSON.stringify(product))

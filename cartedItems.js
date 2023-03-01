@@ -36,7 +36,7 @@ deleteBtn.forEach(element => {
 });
 let displayTotalPrice = document.getElementById("displayTotalPrice")
 
-const totalPrice = cartedItems.reduce((total, product) => total + product.price, 0);
+const totalPrice = cartedItems.reduce((total, product) => total + product.price,0 );
 
 // console.log(totalPrice);
 displayTotalPrice.innerHTML= `<h2 id="TotalPrice">Total $ ${totalPrice}<h2>`
