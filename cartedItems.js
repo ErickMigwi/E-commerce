@@ -1,6 +1,7 @@
 let items = document.getElementById('cartedItems')
-let cartedItems = JSON.parse(localStorage.getItem('cartedItems'))
 
+let cartedItems = JSON.parse(localStorage.getItem('cartedItems'))
+if(cartedItems){
 cartedItems.forEach(element => {
     items.innerHTML+=`
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
@@ -10,12 +11,13 @@ cartedItems.forEach(element => {
             <img class="imgProduct" src="${element.image}" alt="Image of a product" srcset="">
             <p class="productName">${element.title}</p>
             <p class="productPrice">$ ${element.price}</p>
-            <button id="addQuantity">AddQuantity</button>
+            
             <button id='delete' data-id=${element.id}><i class="fa fa-trash" style="font-size: 2rem;  " aria-hidden="true"></i></button>
             </div>
    
     </li>`
 })
+}
 let deleteBtn = document.querySelectorAll('#delete')
  
 deleteBtn.forEach(element => {
@@ -33,7 +35,9 @@ deleteBtn.forEach(element => {
     
 });
 let displayTotalPrice = document.getElementById("displayTotalPrice")
+
 const totalPrice = cartedItems.reduce((total, product) => total + product.price, 0);
+
 // console.log(totalPrice);
 displayTotalPrice.innerHTML= `<h2 id="TotalPrice">Total $ ${totalPrice}<h2>`
 

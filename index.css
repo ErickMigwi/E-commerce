@@ -200,7 +200,8 @@ button{
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
+    margin-top: 30px;
+  
 }
 input{
     width: 20vw;
@@ -284,6 +285,9 @@ footer {
     border-radius: 10px;
     border: 0.4px solid #f0f0f0;
   }
+ footer{
+  margin-top: 30vh;
+ }
   
  #cartedItems{
   display: flex;
@@ -307,6 +311,10 @@ footer {
   border-radius: 10px;
   border: 2px ;
  }
+ .fa-plus{
+  color: white;
+  font-size: 2rem;
+ }
  .fa-trash:hover{
   color: red;
  }
@@ -323,4 +331,176 @@ footer {
 }
 #TotalPrice{
   font-size: 30px;
+}
+#businessName{
+  font-size: 25px;
+}
+.fa-shopping-cart{
+  font-size: 24px;
+}
+#inputTag{
+  width: 80vh; 
+  height: 6vh;
+}
+.fa-search{
+  width: 10vh;
+   background-color:
+    white; border: none;
+}
+
+  
+#addProducts{
+  background-color: #ff8800;
+  color: white;
+  width: 10vw;
+  height: 8vh;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+@media (max-width:350px){
+  #inputTag{
+   width: 20vw;
+   height: 1vh;
+  
+  }
+  #businessName{
+    font-size: 12px;
+  }
+  *{
+    font-size: 0.7rem;
+  }
+  .fa-shopping-cart{
+    font-size: 12px;
+  
+  }
+  #search{
+    width: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #navBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  .fa-plus{
+    font-size: 1rem;
+  }
+  .slideshow{
+    display: flex;
+    width: 100%;
+  }
+  .slideshow img{
+    width: 25%;
+    height: 10vh;
+    object-fit: fill;
+    
+   }
+   #Electronics{
+    background-image: url('Electronic.jpeg');
+    
+    width: 100%;
+    height: 20vh;
+    background-size: cover;
+}
+#Jewelery{
+    background-image: url('jeweleryjpg.jpg');
+    width: 100%;
+    height: 20vh;
+ object-fit: fill;
+}
+
+#MenWear{
+    background-image: url('menwear.jpg');
+    width: 100%;
+    height: 20vh;
+    background-size: 200px;
+    
+}
+#WomenWear{
+    background-image: url('womenwear.jpg');
+    width: 100%;
+    height: 20vh;
+   background-size: 200px;
+}
+
+#WomenWearDiv{
+  width: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+border-radius: 15px
+}
+#MenWearDiv{
+   width: 200px;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 40vh;
+ border-radius: 15px
+ }
+ #ElectronicsDiv{
+  width: 200px;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 40vh;
+     border-radius: 15px
+ 
+ }
+ #JeweleryDiv{
+  width: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; 
+border-radius: 15px
+ }
+ #categories{
+  display: flex;
+    width: 95vw;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+   
+
+}
+#images{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+#theProduct:hover{
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0.4px solid #f0f0f0;
+}
+.fa-trash:hover{
+  color: red;
+ }
+ addCart.clicked{
+  color: #f0f0f0;
+ }
+ svg:hover path {
+  fill: #ff8800;
+}
+button{
+  cursor: pointer;
+}
 }

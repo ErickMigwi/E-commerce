@@ -9,9 +9,7 @@ addProduct.innerHTML = `
 <label for="">Price
 <input id="productPrice" type="number" min="0.01" step="0.01" required>
 </label>
-<label for=""> Quantity
-    <input id= "quantity" type="number" min="1" step="1" required>
-  </label>
+
 <label >Select a category
 <select id="category">
 <option value="women's clothing">Women's Wear</option>
@@ -20,27 +18,47 @@ addProduct.innerHTML = `
 <option value="electronics">Electronics</option>
 </select>
 </label>
-<label for="">Product Image
-<input id="productImage" type="file">
+<label for="">Enter  Image link:
+<input id="productImage" type="text">
 
-<div><button id= "addProducts">Add Product</button></div> 
+<div id="add"><button id= "addProducts">Add Product</button></div> 
 </label>
 </form>`
 let addProducts = document.getElementById('addProducts')
 addProducts.addEventListener('click', ()=>{
     let product = {
-        ProductName: document.getElementById("productName").value,
+        title: document.getElementById("productName").value,
         Descritpion: document.getElementById('description').value,
         id: Math.floor(Math.random() * 100000),
         Category: document.getElementById('category').value,
-        Price: document.getElementById('productPrice').value,
-        ProductImage:document.getElementById('productImage').value,
+        price: document.getElementById('productPrice').value,
+        image:document.getElementById('productImage').value,
         ProductQuantity:document.getElementById("quantity").value
       };
       console.log(product);
       localStorage.setItem("product", JSON.stringify(product))
+      let menWear = JSON.parse( localStorage.getItem("menItems"))
+      let womenWear = JSON.parse( localStorage.getItem("womenItems"))
+      let electronicsItems = JSON.parse( localStorage.getItem("electronicsItems"))
+      let jeweleryItems = JSON.parse( localStorage.getItem("jeweleryItems"))
+       if(product.Category== "jewelery"){
+        jeweleryItems.push(product)
+        localStorage.setItem('jeweleryItems', JSON.stringify(jeweleryItems) )
+       }
+       if(product.Category== "men's clothing"){
+        menWear.push(product)
+        localStorage.setItem('menItems', JSON.stringify(menWear) )
+       }
+       if(product.Category== "women's clothing"){
+        womenWear.push(product)
+        localStorage.setItem('womenItems', JSON.stringify(womenWear) )
+       }
+       if(product.Category== "electronics"){
+        electronicsItems.push(product)
+        localStorage.setItem('electronicsItems', JSON.stringify(electronicsItems) )
+       }
+       
       const apiUrl = "https://fakestoreapi.com/products";
-
 fetch(apiUrl, {
   method: "POST",
   headers: {

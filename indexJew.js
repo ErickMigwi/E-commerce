@@ -6,18 +6,20 @@ fetch('https://fakestoreapi.com/products/category/jewelery')
     // Do something with the data
     //data.push(new1)
     console.log(data);
-    data.forEach(element => {
+   
+    let addCart=document.querySelectorAll('#addCart')
+    
+    //localStorage.setItem("jeweleryItems", JSON.stringify(jeweleryItems) )
+  })
+    let jewelery = JSON.parse( localStorage.getItem("jeweleryItems"))
+    jewelery.forEach(element => {
       images.innerHTML+=`
       <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
       
       <li>
       <div id="theProduct">
       
-	<audio id="sound">
-  <source src="path/to/sound.mp3" type="audio/mpeg">
-  <source src="path/to/sound.ogg" type="audio/ogg">
-  Your browser does not support the audio element.
-</audio>
+	
             <img class="imgProduct" src="${element.image}" alt="Image of a product" srcset="">
             <p class="productName">${element.title}</p>
             <p class="productPrice">$ ${element.price}</p>
@@ -28,37 +30,34 @@ fetch('https://fakestoreapi.com/products/category/jewelery')
       `
     });
     let addCart=document.querySelectorAll('#addCart')
-    addCart.forEach(element => {
-        element.addEventListener('click', ()=>{
-          element.classList.add('clicked');
-            let addCartId= element.getAttribute("data-id")
-            console.log(addCartId);
-           data.forEach(element => {
-            if(element.id== addCartId){
-              let cartedItems = null;
-              const cartedItemsString = localStorage.getItem("cartedItems");
-              
-              if (cartedItemsString) {
-                try {
-                  cartedItems = JSON.parse(cartedItemsString);
-                } catch (error) {
-                  console.error("Error parsing cartedItems JSON data", error);
-                }
-              } else {
-                cartedItems = [];
-              }              
-                  cartedItems.push(element)
-                console.log(cartedItems);
-                localStorage.setItem("cartedItems", JSON.stringify(cartedItems))
-                
+   addCart.forEach(element => {
+      element.addEventListener('click', ()=>{
+          let addCartId= element.getAttribute("data-id")
+          console.log(addCartId);
+         jewelery.forEach(element => {
+          if(element.id== addCartId){
+            let cartedItems = null;
+            const cartedItemsString = localStorage.getItem("cartedItems");
+            
+            if (cartedItemsString) {
+              try {
+                cartedItems = JSON.parse(cartedItemsString);
+              } catch (error) {
+                console.error("Error parsing cartedItems JSON data", error);
+              }
+            } else {
+              cartedItems = [];
+            
             }
-           });
-         
-        })
-    });
-    
-    // localStorage.setItem("jeweleryItems", JSON.stringify(jeweleryItems) )
-  })
+                cartedItems.push(element)
+              console.log(cartedItems);
+              localStorage.setItem("cartedItems", JSON.stringify(cartedItems))
+          }
+         });
+       
+      })
+  });
+  
   let addItem = document.getElementById('addItem')
   addItem.addEventListener('click', ()=>{
     window.location.href = 'addProduct.html'
@@ -68,3 +67,4 @@ fetch('https://fakestoreapi.com/products/category/jewelery')
       window.location.href= 'cartedItems.html'
       
     })
+    
