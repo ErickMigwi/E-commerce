@@ -7,23 +7,23 @@ let Cart = document.getElementById('Cart')
 let addItem = document.getElementById('addItem')
 let addProduct = document.getElementById('addProduct')
 Jewelery.addEventListener('click', ()=>{
-  window.location.href = 'indexJew.html';
+  window.location.href = '../HTML/indexJew.html';
 })
 Electronics.addEventListener('click', ()=>{
-  window.location.href = 'electronics.html';
+  window.location.href = '../HTML/electronics.html';
 })
 WomenWear.addEventListener('click', ()=>{
-  window.location.href = 'womenWear.html';
+  window.location.href = '../HTML/womenWear.html';
 })
 MenWear.addEventListener('click', ()=>{
-  window.location.href = 'menWear.html';
+  window.location.href = '../HTML/menWear.html';
 })
 Cart.addEventListener('click', ()=>{
-  window.location.href= 'cartedItems.html'
+  window.location.href= '../HTML/cartedItems.html'
   console.log(789);
 })
 addItem.addEventListener('click', ()=>{
-window.location.href = 'addProduct.html'
+window.location.href = '../HTML/addProduct.html'
 })
 
 
